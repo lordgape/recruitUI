@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {JobserviceService} from "./jobservice.service";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,6 @@ export class AppComponent {
 
     let allowedTypes = ['image/jpeg'];
 
-    this.canSubmit = allowedTypes.indexOf(this.fileToUpload.type) >= 0;
 
 
 
