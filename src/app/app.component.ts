@@ -50,6 +50,22 @@ export class AppComponent {
 
     let cover_letter =  $("#cover_letter").val();
 
-    this.jobService.apply(firstname, surname, email, phone, cover_letter, this.passportToUpload, this.resumeToUpload);
+    this.jobService.apply(firstname, surname, email, phone, cover_letter, this.passportToUpload, this.resumeToUpload).subscribe(
+        resp => {
+
+          // Remove on production
+          console.log(resp);
+
+        },
+        error => {
+
+          // Remove on production
+         console.log(error);
+
+        },
+        () => {
+          // 'onCompleted' callback.
+          console.log('done');
+        });
   }
 }
