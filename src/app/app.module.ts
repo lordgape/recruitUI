@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {JobserviceService} from "./jobservice.service";
+import {HttpClient} from "@angular/common/http";
 
 
 @NgModule({
@@ -12,7 +14,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [JobserviceService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
